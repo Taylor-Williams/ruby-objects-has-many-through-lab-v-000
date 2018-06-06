@@ -9,6 +9,9 @@ class Patient
 
   def new_appointment(doctor, date)
     app = Appointment.new(date, self, doctor)
+    @appointments << app
+    @doctors << doctor
+    app
   end
 
 end
