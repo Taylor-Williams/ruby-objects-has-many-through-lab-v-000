@@ -17,5 +17,6 @@ class Artist
     song = Song.new(name, self, genre)
     songs << song
     genres << genre if !genres.includes?(genre)
+    song
   end
 end
