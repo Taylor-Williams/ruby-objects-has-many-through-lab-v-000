@@ -16,10 +16,7 @@ class Artist
   def new_song(name, genre)
     song = Song.new(name, self, genre)
     songs << song
-    if !genres.include?(genre)
-      genres << genre
-      genre.artists << self
-    end
+    genres << genre if !genres.include?(genre)
     song
   end
 end
